@@ -1,11 +1,7 @@
 title: Qurrat-ul-Ain Rubab
 email: qurrat.rubab@gmail.com
-description: >-
-  Backend engineer notes on .NET, ASP.NET Core, EF Core, and SQL Server.
-  Field-tested takes from 6 years of hands-on .NET work.
 baseurl: ""
 url: "https://qurrat2.github.io"
-github_username: qurrat2
 
 theme: minima
 
@@ -14,8 +10,10 @@ permalink: /:year/:month/:day/:title/
 minima:
   skin: auto
   social_links:
-    - { platform: github,   user_url: "https://github.com/qurrat2" }
-    - { platform: linkedin, user_url: "https://linkedin.com/in/qurrat2" }
+    - platform: github
+      user_url: "https://github.com/qurrat2"
+    - platform: linkedin
+      user_url: "https://linkedin.com/in/qurrat2"
 
 plugins:
   - jekyll-feed
