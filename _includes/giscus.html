@@ -1,0 +1,21 @@
+{%- if site.giscus.repo_id and site.giscus.repo_id != "REPLACE_ME" -%}
+<section class="giscus-comments" style="margin-top: 3rem;">
+  <h2>Comments</h2>
+  <script src="https://giscus.app/client.js"
+          data-repo="{{ site.giscus.repo }}"
+          data-repo-id="{{ site.giscus.repo_id }}"
+          data-category="{{ site.giscus.category }}"
+          data-category-id="{{ site.giscus.category_id }}"
+          data-mapping="{{ site.giscus.mapping | default: 'pathname' }}"
+          data-strict="0"
+          data-reactions-enabled="{{ site.giscus.reactions_enabled | default: '1' }}"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="{{ site.giscus.theme | default: 'preferred_color_scheme' }}"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <noscript>Enable JavaScript to view comments.</noscript>
+</section>
+{%- endif -%}

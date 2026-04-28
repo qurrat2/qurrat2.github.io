@@ -110,7 +110,7 @@ If your domain classes, services, and rules are plain C# with no dependency on `
 
 ### ADO.NET with stored procedures
 
-`SqlConnection`, `SqlCommand`, `SqlParameter`, `DataReader`. The programming model is largely unchanged, though modern apps typically use `Microsoft.Data.SqlClient` and benefit from improved async and performance behaviour. If your reporting hot paths call stored procedures via ADO.NET, they compile on .NET 8 with little more than a namespace swap from `System.Data.SqlClient` to the recommended `Microsoft.Data.SqlClient` NuGet package. Your T-SQL is untouched.
+`SqlConnection`, `SqlCommand`, `SqlParameter`, `DataReader`. The programming model is unchanged. The supported package is `Microsoft.Data.SqlClient`, which targets `.NET Framework 4.6.2` upward and every modern .NET — same code, same APIs, both sides. If your legacy app already uses it, the migration step here is zero. If you're still on the BCL's `System.Data.SqlClient`, swap to `Microsoft.Data.SqlClient` while you're at it: new SQL Server features (Always Encrypted enclaves, Azure AD auth, newer TDS protocol behaviour) only land there. Your T-SQL is untouched.
 
 ```csharp
 // Runs identically on both .NET Framework 4.x and .NET 8
